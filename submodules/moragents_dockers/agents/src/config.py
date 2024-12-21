@@ -48,6 +48,14 @@ class Config:
                 "human_readable_name": "Crypto Data Fetcher",
                 "upload_required": False,
             },
+            {
+                "path": "src.agents.hotel_finder.agent",
+                "class": "HotelFinderAgent",
+                "description": "Fetches hotel data based on user input. Use when the query explicitly mentions hotels, accommodations, or lodging.",
+                "name": "hotel finder",
+                "human_readable_name": "Hotel Finder",
+                "upload_required": False,
+            },
             # DISABLED: Pending 1inch protocol fix
             #
             # {

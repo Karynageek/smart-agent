@@ -65,6 +65,23 @@ export type CryptoDataMessage = ChatMessageBase & {
   content: CryptoDataMessageContent;
 };
 
+export type HotelFinderMessagePayload = {
+    checkIn: string;
+    checkOut: string;
+    city: string;
+    adults: number;
+    children: number;
+    rooms: number;
+    currency?: string;
+    priceRange?: string;
+    rating?: string;
+};
+
+export type HotelFinderMessage = ChatMessageBase & {
+  role: "hotel_finder";
+  content: HotelFinderMessagePayload;
+};
+
 export type BaseMessageContent = {
   message: string;
   actionType?: string;

@@ -71,6 +71,13 @@ const prefilledOptionsMap: Record<string, PrefilledOption> = {
       { text: "What's the FDV of USDC?", agent: "crypto" },
     ],
   },
+  "hotel finder": {
+    title: "Hotel Booking 🏨",
+    icon: <Zap size={20} />,
+    examples: [
+      { text: "Find me a hotel in Paris", agent: "hotel" },
+    ],
+  },
   "token swap": {
     title: "Token Swaps 💱",
     icon: <ArrowLeftRight size={20} />,

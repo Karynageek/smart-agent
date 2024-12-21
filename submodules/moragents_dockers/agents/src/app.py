@@ -69,6 +69,7 @@ app.include_router(workflow_manager_routes.router)
 
 # Agent route imports
 from src.agents.crypto_data.routes import router as crypto_router
+from src.agents.hotel_finder.routes import router as hotel_finder_router
 from src.agents.rag.routes import router as rag_router
 from src.agents.mor_claims.routes import router as claim_router
 from src.agents.tweet_sizzler.routes import router as tweet_router
@@ -78,6 +79,7 @@ from src.agents.base_agent.routes import router as base_router
 
 # Include agent routes
 app.include_router(crypto_router)
+app.include_router(hotel_finder_router)
 app.include_router(rag_router)
 app.include_router(claim_router)
 app.include_router(tweet_router)

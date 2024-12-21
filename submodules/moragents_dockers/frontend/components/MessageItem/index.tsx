@@ -7,6 +7,7 @@ import {
   ClaimMessagePayload,
   ImageMessageContent,
   CryptoDataMessageContent,
+  HotelFinderMessageContent,
   BaseMessageContent,
 } from "@/services/types";
 import { Avatar } from "@/components/Avatar";
@@ -64,6 +65,17 @@ export const MessageItem: FC<MessageItemProps> = ({
         <ReactMarkdown className={styles.messageText}>
           {cryptoDataContent.data}
         </ReactMarkdown>
+      );
+    }
+
+    if (message.role === "hotel_finder") {
+      return (
+        <HotelFinderMessage
+          isActive={isLastHotelFinderMessage}
+          selectedAgent={selectedAgent}
+          fromMessage={content as HotelFinderMessagePayload}
+          onSearchHotels={onHotelSearch}
+        />
       );
     }
 
